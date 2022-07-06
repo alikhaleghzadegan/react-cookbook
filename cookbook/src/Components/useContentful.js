@@ -1,5 +1,5 @@
-import React from "react";
 import { createClient } from "contentful";
+// import contentful from "contentful";
 
 const useContentful = () => {
   const client = createClient({
@@ -11,10 +11,10 @@ const useContentful = () => {
   const getitem = async () => {
     try {
       const entries = await client.getEntries({
-        content_type: "Recipes",
-        // select: "fields",
+        content_type: "recipes",
+        select: "fields",
       });
-
+      //mapping over it
       console.log("Entries" + entries);
       return entries;
     } catch (error) {

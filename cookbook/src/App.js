@@ -11,9 +11,10 @@ function App() {
 
   useEffect(() => {
     getitem().then((response) => {
-      console.log(response);
+      // console.log(response);
+      setRecipes(response);
     });
-  });
+  }, []);
 
   return (
     <div className="App">
