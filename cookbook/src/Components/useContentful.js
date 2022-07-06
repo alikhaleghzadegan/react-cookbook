@@ -15,19 +15,6 @@ const useContentful = () => {
         // select: "fields",
       });
 
-      // const sanitizedEntries = entries.items.map((item) => {
-      //     const name = item.fields.name
-      //     const description = item.fields.description.content[0].content[0].value
-      //     const exit = item.fields.exit
-
-      //     return {
-      //         // ...item.fields,
-      //         name,
-      //         description,
-      //         exit
-      //     }
-      // })
-      // return sanitizedEntries
       console.log("Entries" + entries);
       return entries;
     } catch (error) {
