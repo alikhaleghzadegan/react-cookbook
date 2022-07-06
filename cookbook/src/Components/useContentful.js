@@ -3,7 +3,7 @@ import { createClient } from "contentful";
 
 const useContentful = () => {
   const client = createClient({
-    space: "exxodu89m7jl",
+    space: REACT_APP_space_id,
     accessToken: process.env.REACT_APP_api_key,
   });
   // The Pangalactic Gargle Blaster
