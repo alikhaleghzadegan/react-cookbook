@@ -3,8 +3,9 @@ import { createClient } from "contentful";
 
 const useContentful = () => {
   const client = createClient({
-    space: REACT_APP_space_id,
-    accessToken: process.env.REACT_APP_api_key,
+    space: "exxodu89m7jl",
+    accessToken: process.env.REACT_APP_API_KEY,
+    host: "preview.contentful.com",
   });
   // The Pangalactic Gargle Blaster
 
@@ -15,7 +16,7 @@ const useContentful = () => {
         select: "fields",
       });
       //mapping over it
-      console.log("Entries" + entries);
+      console.log(entries);
       return entries;
     } catch (error) {
       console.log("Contentful Error :" + error);
