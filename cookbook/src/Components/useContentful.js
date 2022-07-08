@@ -15,8 +15,12 @@ const useContentful = () => {
         content_type: "recipes",
         select: "fields",
       });
-      //mapping over it
-      console.log(entries);
+
+      //This annoying loooooooooooooong list points to one awesome value: sugar !!
+      console.log(
+        entries.items[0].fields.Textbody.content[4].content[0].content[0]
+          .content[0].value
+      );
       return entries;
     } catch (error) {
       console.log("Contentful Error :" + error);
