@@ -1,5 +1,4 @@
 import { createClient } from "contentful";
-// import contentful from "contentful";
 
 const useContentful = () => {
   const client = createClient({
@@ -7,8 +6,6 @@ const useContentful = () => {
     accessToken: process.env.REACT_APP_API_KEY,
     host: "preview.contentful.com",
   });
-  // The Pangalactic Gargle Blaster
-
   const getitem = async () => {
     const obj = {
       content_type: "recipes",
@@ -16,44 +13,36 @@ const useContentful = () => {
     };
     try {
       const entries = await client.getEntries(obj);
-      // const listItems = entries.map(([key, value]) => (
-      //   <li>
-      //     {key}: {value}
-      //   </li>
-      // ));
-      // return <ul>{listItems}</ul>;
-      // };
+      //map over each entry
+      const recipe = entries.items.map((item, index) => {
+        const id = index;
+        const title = item.fields.title;
+        const subtitle = item.fields.subtitle;
+        const intro = item.fields.intro.content[0].content[0].value;
+        const description = item.fields.description.content[0].content[0].value;
+        const url = item.fields.images.fields.file.url;
+        const ingredients = item.fields.ingredients;
+        const category = item.fields.category;
+        const subcategory = item.fields.subcategory;
 
-      // client.getEntries().then(function (entries)
-      //This annoying loooooooooooooong list points to one awesome value: sugar !!
-      // const filtered = obj.homes.filter((a) => {
-      //   return a.home_id === '2';
-      // });
+        return {
+          id,
+          title,
+          subtitle,
+          intro,
+          description,
+          url,
+          ingredients,
+          category,
+          subcategory,
+        };
+      });
 
-      // let testconsole =
-      //   "Titel: " +
-      //   entries.items[0].fields.title +
-      //   " Subtitle :" +
-      //   entries.items[0].fields.subtitle +
-      //   " Intro :" +
-      //   entries.items[0].fields.intro.content[0].content[0].value +
-      //   " Description :" +
-      //   entries.items[0].fields.description.content[0].content[0].value +
-      //   " Image Url :" +
-      //   entries.items[0].fields.images.fields.file.url +
-      //   " Ingredients :" +
-      //   entries.items[0].fields.ingredients +
-      //   " Category :" +
-      //   entries.items[0].fields.category +
-      //   " Subcategory :" +
-      //   entries.items[0].fields.subcategory;
-
-      return entries;
+      return { recipe }; //destructure object
     } catch (error) {
       console.log("Contentful Error :" + error);
     }
   };
   return { getitem };
 };
-
 export default useContentful;
