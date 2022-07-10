@@ -30,23 +30,23 @@ const useContentful = () => {
       //   return a.home_id === '2';
       // });
 
-      let testconsole =
-        "Titel: " +
-        entries.items[0].fields.title +
-        " Subtitle :" +
-        entries.items[0].fields.subtitle +
-        " Intro :" +
-        entries.items[0].fields.intro.content[0].content[0].value +
-        " Description :" +
-        entries.items[0].fields.description.content[0].content[0].value +
-        " Image Url :" +
-        entries.items[0].fields.images.fields.file.url;
-      // entries.items[0].entries.items[0].fields.images.fields.file.url;
-      //Titel:titel: entries.items[0].fields.title
-      //Subtitle:entries.items[0].fields.subtitle
-      //Intro: entries.items[0].fields.intro.content[0].content[0].value
-      //Description: entries.items[0].fields.description.content[0].content[0].value
-      //Image-Url: entries.items[0].fields.images.fields.file.url
+      // let testconsole =
+      //   "Titel: " +
+      //   entries.items[0].fields.title +
+      //   " Subtitle :" +
+      //   entries.items[0].fields.subtitle +
+      //   " Intro :" +
+      //   entries.items[0].fields.intro.content[0].content[0].value +
+      //   " Description :" +
+      //   entries.items[0].fields.description.content[0].content[0].value +
+      //   " Image Url :" +
+      //   entries.items[0].fields.images.fields.file.url +
+      //   " Ingredients :" +
+      //   entries.items[0].fields.ingredients +
+      //   " Category :" +
+      //   entries.items[0].fields.category +
+      //   " Subcategory :" +
+      //   entries.items[0].fields.subcategory;
 
       return entries;
     } catch (error) {
