@@ -10,17 +10,45 @@ const useContentful = () => {
   // The Pangalactic Gargle Blaster
 
   const getitem = async () => {
+    const obj = {
+      content_type: "recipes",
+      select: "fields",
+    };
     try {
-      const entries = await client.getEntries({
-        content_type: "recipes",
-        select: "fields",
-      });
+      const entries = await client.getEntries(obj);
+      // const listItems = entries.map(([key, value]) => (
+      //   <li>
+      //     {key}: {value}
+      //   </li>
+      // ));
+      // return <ul>{listItems}</ul>;
+      // };
 
+      // client.getEntries().then(function (entries)
       //This annoying loooooooooooooong list points to one awesome value: sugar !!
-      console.log(
-        entries.items[0].fields.Textbody.content[4].content[0].content[0]
-          .content[0].value
-      );
+      // const filtered = obj.homes.filter((a) => {
+      //   return a.home_id === '2';
+      // });
+
+      let testconsole =
+        "Titel: " +
+        entries.items[0].fields.title +
+        " Subtitle :" +
+        entries.items[0].fields.subtitle +
+        " Intro :" +
+        entries.items[0].fields.intro.content[0].content[0].val -
+        ue +
+        " Description :" +
+        entries.items[0].fields.intro.content[0].content[0].value +
+        " Image Url :" +
+        entries.items[0].fields.images.fields.file.url;
+      // entries.items[0].entries.items[0].fields.images.fields.file.url;
+      //Titel:titel: entries.items[0].fields.title
+      //Subtitle:entries.items[0].fields.subtitle
+      //Intro: entries.items[0].fields.intro.content[0].content[0].value
+      //Description: entries.items[0].fields.description.content[0].content[0].value
+      //Image-Url: entries.items[0].fields.images.fields.file.url
+      console.log(testconsole);
       return entries;
     } catch (error) {
       console.log("Contentful Error :" + error);
