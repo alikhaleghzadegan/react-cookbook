@@ -36,10 +36,9 @@ const useContentful = () => {
         " Subtitle :" +
         entries.items[0].fields.subtitle +
         " Intro :" +
-        entries.items[0].fields.intro.content[0].content[0].val -
-        ue +
-        " Description :" +
         entries.items[0].fields.intro.content[0].content[0].value +
+        " Description :" +
+        entries.items[0].fields.description.content[0].content[0].value +
         " Image Url :" +
         entries.items[0].fields.images.fields.file.url;
       // entries.items[0].entries.items[0].fields.images.fields.file.url;
@@ -48,7 +47,7 @@ const useContentful = () => {
       //Intro: entries.items[0].fields.intro.content[0].content[0].value
       //Description: entries.items[0].fields.description.content[0].content[0].value
       //Image-Url: entries.items[0].fields.images.fields.file.url
-      console.log(testconsole);
+
       return entries;
     } catch (error) {
       console.log("Contentful Error :" + error);
