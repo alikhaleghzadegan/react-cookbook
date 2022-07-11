@@ -1,15 +1,18 @@
+main {
+  margin-top: 2rem;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Lora:ital@1&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet');
 
 .saffronlogo {
   float: left;
   margin-top: -0.5rem;
-  /*OPTION 2 */
-  /* margin-left: 15%;  */
+  display: flex;
 }
 
 /* LOGO ONLY */
-#logomain {
-  height: 120px;
+.logomain {
+  height: 10rem;
 }
 
 .headernav {
