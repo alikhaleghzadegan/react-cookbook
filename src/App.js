@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { Routes, Route } from 'react-router-dom';
 import useContentful from "./useContentful";
 import Categories from './Categories'
+import SubCategories from './SubCategories';
 
 function App() {
 
@@ -15,7 +17,10 @@ function App() {
 
   return (
     <div className="App">
+
       <Categories categories={categories} />
+      <SubCategories recipes={recipes} />
+
     </div>
   );
 }
