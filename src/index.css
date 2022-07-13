@@ -11,10 +11,12 @@
 }
 
 .categories .row .col img {
-  width: 250px;
-  height: 250px;
+  width: 256px;
+  height: 256px;
   object-fit: cover;
-  border-radius: 50px;
+  border-radius: 50%;
+  outline-style: auto;
+  outline-color: white;
 }
 
 .category-card {
@@ -26,7 +28,7 @@
 .category-card:hover {
   display: inline-block;
   margin: 40px;
-  transform: scale(1.1);
+  transform: scale(1.125);
 }
 
 .category-card h2 {
@@ -37,6 +39,11 @@
   font-weight: 300;
 }
 
+input {
+  width: 250px;
+  height: 40px;
+
+}
 /* @media (min-width: 768px) {
   .section .cards {
     grid-template-columns: repeat(2, 1fr);

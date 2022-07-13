@@ -3,9 +3,13 @@ import { Routes, Route } from 'react-router-dom';
 import useContentful from "./useContentful";
 import Categories from './Categories'
 import SubCategories from './SubCategories';
+import SearchFilter from "./resources/SearchFilter";
+
+
+
+
 
 function App() {
-
   const [categories, setCategories] = useState();
   const [recipes, setRecipes] = useState();
   const { getCategories, getRecipes } = useContentful();
@@ -16,11 +20,11 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-
-      <Categories categories={categories} />
+    <div className="App">       
+      <Categories categories={categories} />      
       <SubCategories recipes={recipes} />
-
+       <SearchFilter placeholder="Find a recipe..." />  {/*store in component data={RecipesData}*/}  
+      
     </div>
   );
 }
