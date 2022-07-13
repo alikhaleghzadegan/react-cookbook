@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background-image: url("./resources/image/cozykitchen.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.categories .row .col img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.category-card {
+  display: inline-block;
+  margin: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.category-card:hover {
+  display: inline-block;
+  margin: 40px;
+  transform: scale(1.1);
+}
+
+.category-card h2 {
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* @media (min-width: 768px) {
+  .section .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
