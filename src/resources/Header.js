@@ -8,7 +8,7 @@ import Cookbook from './image/Cookbook.jpg'
 
 const Header = () => {
     return (
-        <Navbar fixed="top" collapseOnSelect expand="lg" className='Navbar' variant="dark">
+        <Navbar className='Navbar' fixed="top" collapseOnSelect expand="lg" variant="dark">
             <Container className='header-container'>
                 <Navbar.Brand href="/">
                     <div className='logo-div'>

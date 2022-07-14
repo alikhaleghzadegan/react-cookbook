@@ -37,27 +37,41 @@
   font-weight: 300;
 }
 
-.navbar {
+/* >>>NAVBAR<<< */
+.nav-bar-text { /*Contains home, recipes, kitchen, FAQ*/
+  font-family: 'Hot Pizza', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.nav-bar-brand { /*The Bootstrap component containing the logo div*/
+  font-family: 'Hot Pizza', sans-serif;
+  color: white;
+  margin: 0 2.5rem;
+}
+
+.navbar { /*Complete navbar, this is a Bootstrap NavBar*/
   background-color:  #1B1B1B;
   border-bottom-right-radius: 100px;
 }
 
-.logo {
-  background-color: black;
-  height: 5rem;
-}
-
-.logo-cookbook {
-  padding: 0 1rem;
-  height: 3rem;
-}
-
-.logo-div {
+.logo-div { /*The div containing logo image and cookbook image*/
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
+.logo { /*The logo image*/
+  background-color: black;
+  height: 4.5rem;
+}
+
+.logo-cookbook { /*The cookbook image next to the logo*/
+  padding: 0 1rem;
+  height: 3rem;
+}
+
+/*>>>DISPLAY RECIPE COMPONENT<<<*/
 .recipe-container { /*Bootstrap Container*/
   color: white;
 }
@@ -140,25 +154,13 @@
   font-family: 'Arapey', serif;
 }
 
-.recipe-tags {
+.recipe-tags { /*The recipe tags at the end of the page*/
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   background: rgba(168, 196, 51, 0.2);
   border-radius: 50px;
   font-family:'Arapey', serif;
   font-size: 1.25rem;
-}
-
-.nav-bar-text {
-  font-family: 'Hot Pizza', sans-serif;
-  font-size: 1.5rem;
-  color: white;
-}
-
-.nav-bar-brand {
-  font-family: 'Hot Pizza', sans-serif;
-  color: white;
-  margin: 0 2.5rem;
 }
 
 .margin-fixer {
