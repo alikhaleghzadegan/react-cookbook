@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Logo from './image/Logo.jpg'
+import Cookbook from './image/Cookbook.jpg'
 
 const Header = () => {
     return (
@@ -12,7 +13,8 @@ const Header = () => {
                 <Navbar.Brand href="/">
                     <div className='logo-div'>
                         <img className='logo' src={Logo} />
-                        <h1 className='nav-bar-brand'>Cook Book</h1>
+                        <img className='logo-cookbook' src={Cookbook} />
+                        {/* <h1 className='nav-bar-brand'>Cook Book</h1> */}
                     </div>                  
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

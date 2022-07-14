@@ -47,6 +47,11 @@
   height: 5rem;
 }
 
+.logo-cookbook {
+  padding: 0 1rem;
+  height: 3rem;
+}
+
 .logo-div {
   display: flex;
   align-items: center;
