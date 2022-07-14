@@ -3,12 +3,18 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Logo from './image/Logo.jpg'
 
 const Header = () => {
     return (
-        <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar fixed="top" collapseOnSelect expand="lg" className='Navbar' variant="dark">
             <Container className='header-container'>
-                <Navbar.Brand href="#home"><h1 className='nav-bar-brand'>Cook Book</h1></Navbar.Brand>
+                <Navbar.Brand href="#home">
+                    <div className='logo-div'>
+                        <img className='logo' src={Logo} />
+                        <h1 className='nav-bar-brand'>Cook Book</h1>
+                    </div>                  
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">

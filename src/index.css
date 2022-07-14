@@ -37,6 +37,21 @@
   font-weight: 300;
 }
 
+.navbar {
+  background-color:  #1B1B1B;;
+}
+
+.logo {
+  background-color: black;
+  height: 7rem;
+}
+
+.logo-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .recipe-container { /*Bootstrap Container*/
   color: white;
   margin-top: 3rem;
@@ -142,7 +157,7 @@
 }
 
 .margin-fixer {
-  height: 4rem;
+  height: 8rem;
 }
 
 /* MEDIA QUERIES */
