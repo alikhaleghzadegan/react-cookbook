@@ -90,6 +90,14 @@
 .recipe-image{ /*recipe image*/
   border-radius: 5%;
   padding: 1.25rem;
+  width: 500px;
+  border-radius: 50px;
+}
+
+.image-col {
+  display: flex;
+  justify-content: center;
+  
 }
 
 .recipe-long-des-title { /*Description title, h2 element*/
@@ -102,6 +110,15 @@
   font-size: 1.25rem;
   padding: 0 1.25rem 1.25rem 1.25rem;
   font-family: 'Arapey', serif;
+}
+
+@media only screen and (max-width: 600px) {
+  .recipe-image{ /*recipe image*/
+    border-radius: 5%;
+    padding: 1.25rem;
+    width: 400px;
+    border-radius: 50px;
+  }
 }
 
 /* @media (min-width: 768px) {

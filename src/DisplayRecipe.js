@@ -32,8 +32,8 @@ const DisplayRecipe = ({ recipes }) => {
                                     return <p className="recipe-ing-list-item">{eachIngredient}</p>
                                 })}
                         </Col>
-                        <Col className='green_bg'>
-                            <img className="recipe-image" style={{width: 500}} src={element.image.fields.file.url} />
+                        <Col className='green_bg image-col'>
+                            <img className="recipe-image" src={element.image.fields.file.url} />
                         </Col>
                     </Row>
                     <Row className='recipe-long-des-row'>
