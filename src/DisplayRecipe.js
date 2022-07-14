@@ -32,8 +32,13 @@ const DisplayRecipe = ({ recipes }) => {
                                     return <p className="recipe-ing-list-item">{eachIngredient}</p>
                                 })}
                         </Col>
-                        <Col className='green_bg image-col'>
-                            <img className="recipe-image" src={element.image.fields.file.url} />
+                        <Col >
+                            <Row>
+                                <Col className='green_bg image-col'>
+                                    <img className="recipe-image" src={element.image.fields.file.url} />
+                                </Col>
+                            </Row>
+                            
                         </Col>
                     </Row>
                     <Row className='recipe-long-des-row'>
@@ -42,20 +47,6 @@ const DisplayRecipe = ({ recipes }) => {
                             <p className="recipe-long-des">{element.longDescription}</p>
                         </Col>
                     </Row>
-
-                    {/* <div key={element.id}>
-                        <h2 >{element.title}</h2>
-                        <h3>{element.shortDescription}</h3>
-                        <h2>Ingredients</h2>
-                        <ul>
-                            {element.ingredients.map((eachIngredient) => {
-                                return <li>{eachIngredient}</li>
-                            })}
-                        </ul>
-                        <img src={element.image.fields.file.url} />
-                        <h2>Description</h2>
-                        <p>{element.longDescription}</p>
-                    </div> */}
                 </Container >
                 
             )
