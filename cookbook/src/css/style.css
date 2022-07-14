@@ -168,19 +168,21 @@ h1 {
 
 /*-------dropdown menu---------*/
 
-.container-dropdown {
+#container-dropdown {
   justify-content: center;
   border: var(--border);
   text-decoration: none;
-
   color: var(--color);
   padding-right: 1rem;
-  border: var(--border);
   border-radius: 5px;
   width: 100%;
+  display: flex;
+  background-color: none;
 }
 .li {
+  color: #36221d;
   list-style: none;
+  flex: 1 1 auto;
   padding-top: 0.8rem;
   align-items: center;
   width: 20rem;

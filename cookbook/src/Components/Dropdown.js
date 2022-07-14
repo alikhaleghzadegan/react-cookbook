@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Dropdown = ({ props }) => {
-  console.log(props);
+  console.log(props.item[0].title);
 
   //   let navigate = useNavigate();
   //   const [selectval, setSelectval] = useState('');
@@ -19,13 +19,16 @@ const Dropdown = ({ props }) => {
         <h1>Drink Menu</h1>
         <div>
           <ul className="container-dropdown">
-            <li className="li">Tropical Fruit Smoothie</li>
-            <li className="li">Frozen Cinnamon Chocolate Milkshake</li>
-            <li className="li">Jedi Mind Trick Cocktail</li>
-            <li className="li">Last Word Cocktail</li>
-            {/* {props.map((e, index) => {
-              <li key={index}>{e.title}</li>;
-            })} */}
+            {props.item.map((e, index) => (
+              <li key={index} className="li">
+                {/* <NavLink */}
+                {/* to={"/one/" + e.id.value}
+              // style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            > */}
+                {e.title}
+                {/* </NavLink> */}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
