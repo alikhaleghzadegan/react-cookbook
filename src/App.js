@@ -3,6 +3,7 @@ import useContentful from "./useContentful";
 import Categories from './Categories';
 import { Routes, Route } from "react-router-dom";
 import DisplayRecipe from "./DisplayRecipe";
+import Header from "./resources/Header";
 
 function App() {
 
@@ -18,7 +19,8 @@ function App() {
   console.log(recipes)
 
   return (
-    <div className="App"><DisplayRecipe recipes={recipes} />
+    <div className="App">
+      <Header />
       <Routes>
         <Route path="/" element={<Categories categories={categories} />} />
         <Route path="/:recipeId" element={<DisplayRecipe recipes={recipes} />} />
