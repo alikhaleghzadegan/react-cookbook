@@ -1,7 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ListGroup from 'react-bootstrap/ListGroup';
 import { useParams } from "react-router-dom";
 
 const DisplayRecipe = ({ recipes }) => {
@@ -36,7 +35,7 @@ const DisplayRecipe = ({ recipes }) => {
                             </ul>
                         </Col>
                         <Col>
-                            <img src={element.image.fields.file.url} />
+                            <img style={{width: 600}} src={element.image.fields.file.url} />
                         </Col>
                     </Row>
                     <Row>
