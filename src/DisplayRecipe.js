@@ -15,6 +15,10 @@ const DisplayRecipe = ({ recipes }) => {
             
             return (
                 <Container className='recipe-container' >
+                    <Row>
+                        <Col><div className='margin-fixer'></div> {/* This div is placed here to add a space between navbar and followed content. Looking for a proper fix */}
+                        </Col> 
+                    </Row>
                     <Row className='recipe-title-row'>
                         <Col>
                             <h2 className="recipe-title" >{element.title}</h2>

@@ -1,6 +1,35 @@
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 const Header = () => {
-    return <h2>Hello</h2>
+    return (
+        <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Container className='header-container'>
+                <Navbar.Brand href="#home"><h1 className='nav-bar-brand'>Cook Book</h1></Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="/"><h3 className='nav-bar-text'>Home</h3></Nav.Link>
+                        <Nav.Link href="/recipes"><h3 className='nav-bar-text'>Recipes</h3></Nav.Link>
+                        <Nav.Link href="/"><h3 className='nav-bar-text'>Kitchen</h3></Nav.Link>
+                        <Nav.Link href="#"><h3 className='nav-bar-text'>FAQ</h3></Nav.Link>
+                    </Nav>
+                    <Form className="d-flex">
+                        <Form.Control
+                            type="search"
+                            placeholder="Search"
+                            className="me-2"
+                            aria-label="Search"
+                        />
+                        <Button variant="outline-success">Search</Button>
+                    </Form>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    )
 }
 
 export default Header

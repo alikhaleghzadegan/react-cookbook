@@ -39,6 +39,7 @@
 
 .recipe-container { /*Bootstrap Container*/
   color: white;
+  margin-top: 3rem;
 }
 
 .recipe-title-row { /*Bootstrap Row containing recipe title*/
@@ -126,6 +127,22 @@
   border-radius: 50px;
   font-family:'Arapey', serif;
   font-size: 1.25rem;
+}
+
+.nav-bar-text {
+  font-family: 'Hot Pizza', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.nav-bar-brand {
+  font-family: 'Hot Pizza', sans-serif;
+  color: white;
+  margin: 0 2.5rem;
+}
+
+.margin-fixer {
+  height: 4rem;
 }
 
 /* MEDIA QUERIES */
