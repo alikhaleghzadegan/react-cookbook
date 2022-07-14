@@ -72,6 +72,7 @@
   padding: 1.25rem;
   font-style: italic;
   font-size: 1.5em;
+  font-family: 'Arapey', serif;
 }
 
 .recipe-ing-title { /*h2 element ingredient title*/
@@ -83,6 +84,7 @@
 .recipe-ing-list-item { /*each ingredient item, p element*/
   font-size: 1.25rem;
   padding: 0 1.25rem;
+  font-family: 'Arapey', serif;
 }
 
 .recipe-image{ /*recipe image*/
@@ -99,6 +101,7 @@
 .recipe-long-des { /*Description paragraph, p element*/
   font-size: 1.25rem;
   padding: 0 1.25rem 1.25rem 1.25rem;
+  font-family: 'Arapey', serif;
 }
 
 /* @media (min-width: 768px) {
