@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <Navbar fixed="top" collapseOnSelect expand="lg" className='Navbar' variant="dark">
             <Container className='header-container'>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                     <div className='logo-div'>
                         <img className='logo' src={Logo} />
                         <h1 className='nav-bar-brand'>Cook Book</h1>
@@ -19,9 +19,9 @@ const Header = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="/"><h3 className='nav-bar-text'>Home</h3></Nav.Link>
-                        <Nav.Link href="/recipes"><h3 className='nav-bar-text'>Recipes</h3></Nav.Link>
+                        <Nav.Link href="/"><h3 className='nav-bar-text'>Recipes</h3></Nav.Link>
                         <Nav.Link href="/"><h3 className='nav-bar-text'>Kitchen</h3></Nav.Link>
-                        <Nav.Link href="#"><h3 className='nav-bar-text'>FAQ</h3></Nav.Link>
+                        <Nav.Link href="/"><h3 className='nav-bar-text'>FAQ</h3></Nav.Link>
                     </Nav>
                     <Form className="d-flex">
                         <Form.Control
