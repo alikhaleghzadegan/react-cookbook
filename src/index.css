@@ -63,6 +63,13 @@
 
 .recipe-long-des-row { /*Bootstrap Row containing long description*/
   background: rgba(0, 0, 0, 0.7);
+}
+
+.recipe-tags-col{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 0px 0px 50px 50px;
 }
 
@@ -81,7 +88,7 @@
 }
 
 .recipe-ing-title { /*h2 element ingredient title*/
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   padding: 1.25rem;
   font-family: 'Hot Pizza', sans-serif;
 }
@@ -101,7 +108,7 @@
 }
 
 .recipe-long-des-title { /*Description title, h2 element*/
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   padding: 1.25rem;
   font-family: 'Hot Pizza', sans-serif;
 }
@@ -112,6 +119,16 @@
   font-family: 'Arapey', serif;
 }
 
+.recipe-tags {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background: rgba(168, 196, 51, 0.2);
+  border-radius: 50px;
+  font-family:'Arapey', serif;
+  font-size: 1.25rem;
+}
+
+/* MEDIA QUERIES */
 @media only screen and (max-width: 600px) {
   .recipe-image{ /*recipe image*/
     border-radius: 5%;
@@ -119,6 +136,11 @@
     width: 400px;
     border-radius: 50px;
   }
+
+  .recipe-tags-col{
+    display: flex;
+  }
+  
 }
 
 /* @media (min-width: 768px) {

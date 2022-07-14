@@ -47,6 +47,13 @@ const DisplayRecipe = ({ recipes }) => {
                             <p className="recipe-long-des">{element.longDescription}</p>
                         </Col>
                     </Row>
+                    <Row>
+                        <Col className="recipe-tags-col">
+                        {element.tags.map((eachTag) => {
+                                    return <p className="recipe-tags">{eachTag}</p>
+                                })}
+                        </Col>
+                    </Row>
                 </Container >
                 
             )
