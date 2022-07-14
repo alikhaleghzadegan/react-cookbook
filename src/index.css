@@ -37,6 +37,19 @@
   font-weight: 300;
 }
 
+.recipe-container {
+  color: white;
+}
+
+.recipe-title-row {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  background-color: rgba(217, 217, 217, 0.2);
+  border-radius: 50px 50px 0px 0px;
+}
+
+
 /* @media (min-width: 768px) {
   .section .cards {
     grid-template-columns: repeat(2, 1fr);

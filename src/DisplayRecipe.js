@@ -14,21 +14,21 @@ const DisplayRecipe = ({ recipes }) => {
         if (element.id == recipeId) {
             
             return (
-                <Container >
-                    <Row>
+                <Container className='recipe-container' >
+                    <Row className='recipe-title-row'>
                         <Col>
-                            <h2 >{element.title}</h2>
+                            <h2 className="recipe-title" >{element.title}</h2>
                         </Col>
                     </Row>
                     <Row>
                         <Col>
-                            <h3>{element.shortDescription}</h3>
+                            <h3 className="recipe-short-des">{element.shortDescription}</h3>
                         </Col>
                     </Row>
                     <Row>
                         <Col>
-                            <h2>Ingredients</h2>
-                            <ul>
+                            <h2 className="recipe-ing-title">Ingredients</h2>
+                            <ul className="recipe-ing-list">
                                 {element.ingredients.map((eachIngredient) => {
                                     return <li>{eachIngredient}</li>
                                 })}
@@ -40,8 +40,8 @@ const DisplayRecipe = ({ recipes }) => {
                     </Row>
                     <Row>
                         <Col>
-                            <h2>Description</h2>
-                            <p>{element.longDescription}</p>
+                            <h2 className="recipe-long-des-title">Description</h2>
+                            <p className="recipe-long-des">{element.longDescription}</p>
                         </Col>
                     </Row>
 
