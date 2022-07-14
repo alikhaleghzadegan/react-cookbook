@@ -65,7 +65,7 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
-.recipe-tags-col{
+.recipe-tags-col{ /*Bootstrap Column containing tags*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
