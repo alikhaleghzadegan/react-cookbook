@@ -56,7 +56,7 @@
 }
 
 .recipe-title { /*h2 element*/
-  padding: 1.5rem;
+  padding: 1.25rem;
   text-align: center;
   font-size: 2rem;
   font-family: 'Hot Pizza', sans-serif;
@@ -77,6 +77,11 @@
 .recipe-ing-list-item { /*each ingredient item, p element*/
   font-size: 1.25rem;
   padding: 0 1.25rem;
+}
+
+.recipe-image{ /*recipe image*/
+  border-radius: 5%;
+  padding: 1.25rem;
 }
 
 .recipe-long-des-title { /*Description title, h2 element*/

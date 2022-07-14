@@ -33,7 +33,7 @@ const DisplayRecipe = ({ recipes }) => {
                                 })}
                         </Col>
                         <Col>
-                            <img style={{width: 600}} src={element.image.fields.file.url} />
+                            <img className="recipe-image" style={{width: 500}} src={element.image.fields.file.url} />
                         </Col>
                     </Row>
                     <Row className='recipe-long-des-row'>
