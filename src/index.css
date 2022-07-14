@@ -37,33 +37,54 @@
   font-weight: 300;
 }
 
-.recipe-container {
+.recipe-container { /*Bootstrap Container*/
   color: white;
 }
 
-.recipe-title {
-  padding: 1.5rem;
-  text-align: center;
-  font-size: 2rem;
+.recipe-title-row { /*Bootstrap Row containing recipe title*/
   background-color: rgba(217, 217, 217, 0.2);
   border-radius: 50px 50px 0px 0px;
 }
 
-.recipe-short-des {
-  padding: 1.25rem;
-  font-style: italic;
-  font-size: 1.5em;
+.recipe-short-des-row, .recipe-ing-img-row { /*Bootstrap Row containing ingredients/image && Row containing short description*/
   background: rgba(0, 0, 0, 0.7);
 }
 
-.recipe-ing-title {
+.recipe-long-des-row { /*Bootstrap Row containing long description*/
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0px 0px 50px 50px;
+}
+
+.recipe-title { /*h2 element*/
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.recipe-short-des { /*h3 element*/
+  padding: 1.25rem;
+  font-style: italic;
+  font-size: 1.5em;
+}
+
+.recipe-ing-title { /*h2 element ingredient title*/
   font-size: 1.75rem;
   padding: 1.25rem;
 }
 
-.recipe-ing-list-item {
+.recipe-ing-list-item { /*each ingredient item, p element*/
   font-size: 1.25rem;
   padding: 0 1.25rem;
+}
+
+.recipe-long-des-title { /*Description title, h2 element*/
+  font-size: 1.75rem;
+  padding: 1.25rem;
+}
+
+.recipe-long-des { /*Description paragraph, p element*/
+  font-size: 1.25rem;
+  padding: 1.25rem;
 }
 
 /* @media (min-width: 768px) {
