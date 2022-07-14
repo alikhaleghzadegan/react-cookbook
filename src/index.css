@@ -50,6 +50,12 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
+.green_bg {
+  background: rgba(168, 196, 51, 0.2);
+  border-radius: 50px;
+  margin: 1.5rem;
+}
+
 .recipe-long-des-row { /*Bootstrap Row containing long description*/
   background: rgba(0, 0, 0, 0.7);
   border-radius: 0px 0px 50px 50px;
