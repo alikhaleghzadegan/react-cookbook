@@ -59,6 +59,7 @@
   padding: 1.5rem;
   text-align: center;
   font-size: 2rem;
+  font-family: 'Hot Pizza', sans-serif;
 }
 
 .recipe-short-des { /*h3 element*/
@@ -70,6 +71,7 @@
 .recipe-ing-title { /*h2 element ingredient title*/
   font-size: 1.75rem;
   padding: 1.25rem;
+  font-family: 'Hot Pizza', sans-serif;
 }
 
 .recipe-ing-list-item { /*each ingredient item, p element*/
@@ -80,11 +82,12 @@
 .recipe-long-des-title { /*Description title, h2 element*/
   font-size: 1.75rem;
   padding: 1.25rem;
+  font-family: 'Hot Pizza', sans-serif;
 }
 
 .recipe-long-des { /*Description paragraph, p element*/
   font-size: 1.25rem;
-  padding: 1.25rem;
+  padding: 0 1.25rem 1.25rem 1.25rem;
 }
 
 /* @media (min-width: 768px) {
