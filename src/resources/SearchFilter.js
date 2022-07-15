@@ -14,7 +14,7 @@ function SearchFilter({placeholder, data}) {
     if (searchEntry === '') {
       setSearchInput([])
     }else {
-      setsearchInput(newFilter);
+      setSearchInput(newFilter);
     }
   };
     
