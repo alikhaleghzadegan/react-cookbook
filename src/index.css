@@ -69,7 +69,13 @@ input {
 #logofooter {
   height: 128px;
   width: 128px;
-  margin-right: 100px;
+  margin-right: 100px; 
+  animation: shake 1.3s infinite; 
+}
+
+#logofooter:hover {
+  cursor: pointer;
+  
 }
 
 #socialmedia {
@@ -88,7 +94,7 @@ input {
 
 .footer-heading h2 {    
   color: white; 
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 1.5rem;  
 }
 
@@ -96,18 +102,19 @@ input {
   color: white;    
   text-decoration: none;
   margin-bottom: 0.5rem;
+  font-size: 0.80rem;
 }
 
 .footer-email-form h2 {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 2rem;
 }
 
 #footer-email {
   width: 250px;
   height: 40px;
-  font-size: 1rem;    
+  font-size: 0.85rem;    
   background-color: rgba(255, 255, 255, 0.959);  
   border-radius: 10px;
   border: none;
@@ -129,12 +136,23 @@ input {
   transition: 0.3 ease-in-out;
 }
 
-#footer-email::placeholder {
-  color:#b1b1b1;
-}
-
 #newsletter-email:hover {
   cursor: pointer;
+  animation: shake 1.3s infinite;
 }
 
+#socialmedia:hover {
+  cursor: pointer;
+  
+ 
+  }
+
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(25deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-25deg); }
+  100% { transform: rotate(0deg); }
+}
 

@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react';
 
 
-
 function App() {
  
   return (     
@@ -20,8 +19,9 @@ function App() {
         </div>
         <div className="footer-heading footer-mid">
           <h2>Contact</h2>
-          <a href="#" target="_blank"> Support </a>
+          <a href="#" target="_blank"> Support </a>          
           <a href="#"> Sponsorship </a>
+          <a href="#"> FAQ </a>
           <a href="#"> Cookies Policy </a>
           
         </div>
