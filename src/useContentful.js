@@ -18,7 +18,7 @@ const useContentful = () => {
                     const { id, title, name } = item;
                     const image = item.image.fields.file.url;
                     return { id, title, name, image };
-                })
+                });
         } catch (error) {
             console.error(error);
         }
@@ -39,7 +39,6 @@ const useContentful = () => {
             console.error(error);
         }
     }
-
     return { getCategories, getRecipes };
 }
 
