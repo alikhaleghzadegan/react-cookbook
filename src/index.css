@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "hotpizza";
+  src: url("./resources/font/hotpizza.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,22 +10,31 @@
 
 .App {
   background-image: url("./resources/image/cozykitchen.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  background-position: left;
   background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
-.categories .row .col img {
-  width: 250px;
-  height: 250px;
+.categories .row .col img,
+.category .row .col img {
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid white;
 }
 
 .category-card {
+  width: 250px;
+  height: 250px;
   display: inline-block;
   margin: 40px;
   transition: all 0.2s ease-in-out;
+  padding-top: 70px;
 }
 
 .category-card:hover {
@@ -33,12 +47,15 @@
   text-align: center;
   margin-top: 10px;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 300;
+  height: 50px;
+  overflow: hidden;
 }
 
-/* @media (min-width: 768px) {
-  .section .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
+.navbar-nav-text {
+  font-family: "hotpizza", sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
+  padding-top: 15px;
+}
