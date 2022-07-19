@@ -303,7 +303,6 @@
   margin-bottom: 10px;
 }
 
-
 /* HOVER LINKS IN FOOTER */
 .footer-heading a:hover {
   color: #ff6600;
@@ -323,7 +322,6 @@
   animation: shake2 1.3s infinite;
 
 }
-
 
 @keyframes shake {
   0% { transform: rotate(0deg); }
