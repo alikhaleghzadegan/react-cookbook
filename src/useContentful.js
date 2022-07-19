@@ -13,12 +13,12 @@ const useContentful = () => {
         try {
             const entries = await client.getEntries({ content_type: "categories" });
             return entries.items
-            .map(item => item.fields)
-            .map(item => {
-                const { id, title, name } = item;
-                const image = item.image.fields.file.url;
-                return { id, title, name, image }
-            })
+                .map(item => item.fields)
+                .map(item => {
+                    const { id, title, name } = item;
+                    const image = item.image.fields.file.url;
+                    return { id, title, name, image };
+                })
         } catch (error) {
             console.error(error);
         }
@@ -28,12 +28,12 @@ const useContentful = () => {
         try {
             const entries = await client.getEntries({ content_type: "cookbook_api" });
             return entries.items
-            .map(item => item.fields)
-            .map(item => {
-                const { id, title, shortDescription, longDescription, tags, ingredients, autor, creationDate, category } = item;
-                const image = item.image.fields.file.url;
-                return { id, title, shortDescription, longDescription, image, tags, ingredients, autor, creationDate, category };
-            });
+                .map(item => item.fields)
+                .map(item => {
+                    const { id, title, shortDescription, longDescription, tags, ingredients, autor, creationDate, category } = item;
+                    const image = item.image.fields.file.url;
+                    return { id, title, shortDescription, longDescription, image, tags, ingredients, autor, creationDate, category };
+                });
             
         } catch (error) {
             console.error(error);
