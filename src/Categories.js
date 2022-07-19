@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 
 export default function Categories({ categories }) {
 
-    console.log(categories);
-
     return (
         <div>
             <Container className='categories'>
@@ -28,4 +26,3 @@ export default function Categories({ categories }) {
         </div>
     );
 }
-

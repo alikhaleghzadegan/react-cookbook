@@ -34,7 +34,6 @@ const useContentful = () => {
                     const image = item.image.fields.file.url;
                     return { id, title, shortDescription, longDescription, image, tags, ingredients, autor, creationDate, category };
                 });
-            
         } catch (error) {
             console.error(error);
         }

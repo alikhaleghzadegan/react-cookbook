@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "hotpizza";
+  src: url("./resources/font/hotpizza.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,27 +10,40 @@
 
 .App {
   background-image: url("./resources/image/cozykitchen.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  background-position: left;
   background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
-.categories .row .col img {
-  width: 250px;
-  height: 250px;
+/* .categories,
+.category {
+  padding-top: 100px;
+} */
+
+.categories .row .col img,
+.category .row .col img {
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid white;
 }
 
 .category-card {
+  width: 250px;
+  height: 250px;
   display: inline-block;
-  margin: 40px;
   transition: all 0.2s ease-in-out;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
 .category-card:hover {
   display: inline-block;
-  margin: 40px;
   transform: scale(1.1);
 }
 
@@ -33,8 +51,10 @@
   text-align: center;
   margin-top: 10px;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 300;
+  height: 50px;
+  overflow: hidden;
 }
 
 .navbar-nav-text {
@@ -44,36 +64,59 @@
   padding-top: 15px;
 }
 
-/*>>>DISPLAY RECIPE COMPONENT<<<*/
-.recipe-container { /*Bootstrap Container*/
+.path p {
+  padding-top: 100px;
+  padding-left: 100px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.path a {
+  text-decoration: none;
   color: white;
 }
 
-.recipe-title-row { /*Bootstrap Row containing recipe title*/
+/*>>>DISPLAY RECIPE COMPONENT<<<*/
+.recipe-container {
+  /*Bootstrap Container*/
+  color: white;
+  padding-bottom: 50px;
+}
+
+.recipe-title-row {
+  /*Bootstrap Row containing recipe title*/
   background-color: rgba(217, 217, 217, 0.2);
   border-radius: 50px 50px 0px 0px;
 }
 
-.recipe-short-des-row, .recipe-ing-img-row { /*Bootstrap Row containing ingredients/image && Row containing short description*/
+.recipe-short-des-row,
+.recipe-ing-img-row {
+  /*Bootstrap Row containing ingredients/image && Row containing short description*/
   background: rgba(0, 0, 0, 0.7);
 }
 
-.image-col { /*Bootstrap Column containing image*/
+.image-col {
+  /*Bootstrap Column containing image*/
   display: flex;
   justify-content: center;
 }
 
-.green_bg { /*green background*/
+.green_bg {
+  /*green background*/
   background: rgba(168, 196, 51, 0.2);
   border-radius: 50px;
   margin: 1.5rem;
 }
 
-.recipe-long-des-row { /*Bootstrap Row containing long description*/
+.recipe-long-des-row {
+  /*Bootstrap Row containing long description*/
   background: rgba(0, 0, 0, 0.7);
 }
 
-.recipe-tags-col{ /*Bootstrap Column containing tags*/
+
+.recipe-tags-col {
+  /*Bootstrap Column containing tags*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -81,83 +124,85 @@
   border-radius: 0px 0px 50px 50px;
 }
 
-.recipe-title { /*h2 element*/
+.recipe-title {
+  /*h2 element*/
   padding: 1.25rem;
   text-align: center;
   font-size: 2rem;
-  font-family: 'Hot Pizza', sans-serif;
+  font-family: "Hot Pizza", sans-serif;
 }
 
-.recipe-short-des { /*h3 element*/
+.recipe-short-des {
+  /*h3 element*/
   padding: 1.25rem;
   font-style: italic;
   font-size: 1.5em;
-  font-family: 'Arapey', serif;
+  font-family: "Arapey", serif;
 }
 
-.recipe-ing-title { /*h2 element ingredient title*/
+.recipe-ing-title {
+  /*h2 element ingredient title*/
   font-size: 1.5rem;
   padding: 1.25rem;
-  font-family: 'Hot Pizza', sans-serif;
+  font-family: "Hot Pizza", sans-serif;
 }
 
-.recipe-ing-list-item { /*each ingredient item, p element*/
+.recipe-ing-list-item {
+  /*each ingredient item, p element*/
   font-size: 1.25rem;
   padding: 0 1.25rem;
-  font-family: 'Arapey', serif;
+  font-family: "Arapey", serif;
 }
 
-.recipe-image{ /*recipe image*/
+.recipe-image {
+  /*recipe image*/
   border-radius: 5%;
   padding: 1.25rem;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 50px;
 }
 
-.recipe-long-des-title { /*Description title, h2 element*/
+.recipe-long-des-title {
+  /*Description title, h2 element*/
   font-size: 1.5rem;
   padding: 1.25rem;
-  font-family: 'Hot Pizza', sans-serif;
+  font-family: "Hot Pizza", sans-serif;
 }
 
-.recipe-long-des { /*Description paragraph, p element*/
+.recipe-long-des {
+  /*Description paragraph, p element*/
   font-size: 1.25rem;
   padding: 0 1.25rem 1.25rem 1.25rem;
-  font-family: 'Arapey', serif;
+  font-family: "Arapey", serif;
 }
 
-.recipe-tags { /*The recipe tags at the end of the page*/
+.recipe-tags {
+  /*The recipe tags at the end of the page*/
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   background: rgba(168, 196, 51, 0.2);
   border-radius: 50px;
-  font-family:'Arapey', serif;
+  font-family: "Arapey", serif;
   font-size: 1.25rem;
 }
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 600px) {
-  .recipe-image{ /*recipe image*/
+  .recipe-image {
+    /*recipe image*/
     border-radius: 5%;
     padding: 1.25rem;
     width: 400px;
     border-radius: 50px;
   }
 
-  .recipe-tags-col{
+  .recipe-tags-col {
     display: flex;
   }
 
   .navbar {
     border-bottom-right-radius: 25px;
   }
-  
 }
-
-/* @media (min-width: 768px) {
-  .section .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
