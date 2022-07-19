@@ -16,11 +16,6 @@
   min-height: 79.4vh;
 }
 
-/* .categories,
-.category {
-  padding-top: 100px;
-} */
-
 .categories .row .col img,
 .category .row .col img {
   width: 200px;
