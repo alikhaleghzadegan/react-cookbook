@@ -27,8 +27,13 @@ const useContentful = () => {
     const getRecipes = async () => {
         try {
             const entries = await client.getEntries({ content_type: "cookbook_api" });
-            console.log(entries.items.map(item => item.fields));
-            return entries.items.map(item => item.fields);
+            return entries.items
+            .map(item => item.fields)
+            .map(item => {
+                const { id, title, shortDescription, longDescription, tags, ingredients, autor, creationDate, category } = item;
+                const image = item.image.fields.file.url;
+                return { id, title, shortDescription, longDescription, image, tags, ingredients, autor, creationDate, category };
+            });
             
         } catch (error) {
             console.error(error);

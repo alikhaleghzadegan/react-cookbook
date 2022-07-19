@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import { Routes, Route } from 'react-router-dom';
 import useContentful from "./useContentful";
-import Categories from './Categories';
-import { Routes, Route } from "react-router-dom";
-import DisplayRecipe from "./DisplayRecipe";
-import Header from "./resources/Header";
+import Categories from './Categories'
+import SubCategory from './SubCategory'
+import Recipe from "./Recipe";
+import Header from "./Header";
 
 function App() {
 
@@ -22,8 +23,9 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Categories categories={categories} />} />
-        <Route path="/:recipeId" element={<DisplayRecipe recipes={recipes} />} />
+      <Route path="/" element={<Categories categories={categories} />} />
+      <Route path="/categories/:category" element={<SubCategory recipes={recipes} />} />
+      <Route path="/categories/:category/:recipe_id" element={<Recipe recipes={recipes} />} />
       </Routes>
     </div>
   );

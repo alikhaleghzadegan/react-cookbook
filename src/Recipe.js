@@ -3,15 +3,15 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useParams } from "react-router-dom";
 
-const DisplayRecipe = ({ recipes }) => {
+const Recipe = ({ recipes }) => {
 
-    let {recipeId} = useParams();
+    let {recipe_id} = useParams();
 
     console.log(recipes);
 
     return recipes.map((element) => {
        
-        if (element.id == recipeId) {
+        if (element.id == recipe_id) {
             
             return (
                 <Container className='recipe-container' >
@@ -64,4 +64,4 @@ const DisplayRecipe = ({ recipes }) => {
         }})
 }
 
-export default DisplayRecipe
+export default Recipe
