@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+.Nav.Link:hover {
+  color:#ff6600;
+}
+
 .App {
   background-image: url("./resources/image/cozykitchen.jpg");
   background-position: left;
@@ -18,14 +22,25 @@
 
 .categories .row .col img,
 .category .row .col img {
+  
+
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 50px;
+  border-radius: 50%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid white;
+  border: 4px solid white;
+}
+
+.categories, .category {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .category-card {
@@ -95,6 +110,7 @@
   /*Bootstrap Column containing image*/
   display: flex;
   justify-content: center;
+  
 }
 
 .green_bg {
@@ -149,14 +165,18 @@
 }
 
 .recipe-image {
-  /*recipe image*/
-  border-radius: 5%;
-  padding: 1.25rem;
+  /*recipe image*/ 
   width: 400px;
   height: 400px;
   object-fit: cover;
-  border-radius: 50px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-top: 55px;
 }
+
+/* .recipe-image img {
+  
+} */
 
 .recipe-long-des-title {
   /*Description title, h2 element*/

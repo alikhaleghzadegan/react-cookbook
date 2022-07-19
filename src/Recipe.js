@@ -37,7 +37,7 @@ export default function Recipe({ recipes }) {
                                     </Col>
                                     <Col >
                                         <Row>
-                                            <Col className='green_bg image-col'>
+                                            <Col className='image-col'>
                                                 <img className="recipe-image" src={element.image} />
                                             </Col>
                                         </Row>
