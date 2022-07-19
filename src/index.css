@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -49,3 +52,89 @@ input {
     grid-template-columns: repeat(2, 1fr);
   }
 } */
+
+
+/* FOOTER */
+.footer {
+  font-family: 'Montserrat', sans-serif;   
+  width: 100%;
+  height: auto; 
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  margin: 0 auto;
+  padding-top: 1rem;    
+}
+
+#logofooter {
+  height: 128px;
+  width: 128px;
+  margin-right: 100px;
+}
+
+#socialmedia {
+  height: 128px;  
+}
+
+.footer-container { 
+  background-color:#1b1b1b;  
+}
+
+.footer-heading {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5rem;     
+}
+
+.footer-heading h2 {    
+  color: white; 
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;  
+}
+
+.footer-heading a {
+  color: white;    
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer-email-form h2 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#footer-email {
+  width: 250px;
+  height: 40px;
+  font-size: 1rem;    
+  background-color: rgba(255, 255, 255, 0.959);  
+  border-radius: 10px;
+  border: none;
+  outline: none;    
+  padding-left: 10px;  
+}
+
+#newsletter-email {
+  height: 50px;
+  width:50px;
+  margin-left:5px;
+  margin-bottom: 10px;
+}
+
+
+/* HOVER LINKS IN FOOTER */
+.footer-heading a:hover {
+  color: #ff6600;
+  transition: 0.3 ease-in-out;
+}
+
+#footer-email::placeholder {
+  color:#b1b1b1;
+}
+
+#newsletter-email:hover {
+  cursor: pointer;
+}
+
+

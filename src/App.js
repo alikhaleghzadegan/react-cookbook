@@ -4,10 +4,7 @@ import useContentful from "./useContentful";
 import Categories from './Categories'
 import SubCategories from './SubCategories';
 import SearchFilter from "./resources/SearchFilter";
-
-
-
-
+import Footer from "./resources/Footer";
 
 function App() {
   const [categories, setCategories] = useState();
@@ -24,7 +21,7 @@ function App() {
       <Categories categories={categories} />      
       <SubCategories recipes={recipes} />
        <SearchFilter placeholder="Find a recipe..." />  {/*store in component data={RecipesData}*/}  
-      
+      <Footer />
     </div>
   );
 }
