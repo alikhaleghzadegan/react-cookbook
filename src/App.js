@@ -5,6 +5,7 @@ import Categories from './Categories'
 import SubCategory from './SubCategory'
 import Recipe from "./Recipe";
 import Header from "./Header";
+import NavSearch from "./NavSearch";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <NavSearch categories={categories} recipes={recipes} />
       <Routes>
         <Route path="/" element={<Categories categories={categories} />} />
         <Route path="/categories/:category" element={<SubCategory recipes={recipes} />} />
