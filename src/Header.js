@@ -9,7 +9,7 @@ export default function Header() {
         <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand href="#">
-                    <img
+                    <img                        
                         alt=""
                         src={Logo}
                         width="90"

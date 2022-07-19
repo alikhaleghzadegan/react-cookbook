@@ -6,6 +6,7 @@ import SubCategory from './SubCategory'
 import Recipe from "./Recipe";
 import Header from "./Header";
 import NavSearch from "./NavSearch";
+import Footer from "./Footer";
 
 function App() {
 
@@ -19,14 +20,17 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div>
       <Header />
+    <div className="App">      
       <NavSearch categories={categories} recipes={recipes} />
       <Routes>
         <Route path="/" element={<Categories categories={categories} />} />
         <Route path="/categories/:category" element={<SubCategory recipes={recipes} />} />
         <Route path="/categories/:category/:recipe_id" element={<Recipe recipes={recipes} />} />
-      </Routes>
+      </Routes>      
+    </div>
+      <Footer/>
     </div>
   );
 }
