@@ -23,9 +23,9 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-      <Route path="/" element={<Categories categories={categories} />} />
-      <Route path="/categories/:category" element={<SubCategory recipes={recipes} />} />
-      <Route path="/categories/:category/:recipe_id" element={<Recipe recipes={recipes} />} />
+        <Route path="/" element={<Categories categories={categories} />} />
+        <Route path="/categories/:category" element={<SubCategory recipes={recipes} />} />
+        <Route path="/categories/:category/:recipe_id" element={<Recipe recipes={recipes} />} />
       </Routes>
     </div>
   );

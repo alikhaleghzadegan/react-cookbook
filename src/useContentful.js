@@ -13,12 +13,12 @@ const useContentful = () => {
         try {
             const entries = await client.getEntries({ content_type: "categories" });
             return entries.items
-                .map(item => item.fields)
-                .map(item => {
-                    const { id, title, name } = item;
-                    const image = item.image.fields.file.url;
-                    return { id, title, name, image }
-                })
+            .map(item => item.fields)
+            .map(item => {
+                const { id, title, name } = item;
+                const image = item.image.fields.file.url;
+                return { id, title, name, image }
+            })
         } catch (error) {
             console.error(error);
         }
