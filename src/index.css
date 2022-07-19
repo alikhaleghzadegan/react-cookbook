@@ -112,6 +112,7 @@
   padding: 1.25rem;
   width: 500px;
   height: 500px;
+  object-fit: cover;
   border-radius: 50px;
 }
 
@@ -134,11 +135,6 @@
   border-radius: 50px;
   font-family:'Arapey', serif;
   font-size: 1.25rem;
-}
-
-.margin-fixer {
-  height: 8rem;
-  width: 1rem;
 }
 
 /* MEDIA QUERIES */
