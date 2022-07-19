@@ -110,7 +110,12 @@
   /*Bootstrap Column containing image*/
   display: flex;
   justify-content: center;
-  
+}
+
+.image-main-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .green_bg {
@@ -172,7 +177,7 @@
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid white;
-  margin-top: 55px;
+
 }
 
 /* .recipe-image img {
