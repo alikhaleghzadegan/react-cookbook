@@ -8,8 +8,8 @@ export default function Header() {
     return (
         <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#">
-                    <img
+                <Navbar.Brand href="/">
+                    <img                                         
                         alt=""
                         src={Logo}
                         width="90"
@@ -20,7 +20,7 @@ export default function Header() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link className='navbar-nav-text' href="#">Home</Nav.Link>
+                        <Nav.Link className='navbar-nav-text' href="/">Home</Nav.Link>
                         <Nav.Link className='navbar-nav-text' href="#">Recipes</Nav.Link>
                         <Nav.Link className='navbar-nav-text' href="#">Kitchen</Nav.Link>
                         <Nav.Link className='navbar-nav-text' href="#">FAQ</Nav.Link>

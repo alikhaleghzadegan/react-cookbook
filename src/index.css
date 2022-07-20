@@ -8,29 +8,39 @@
   padding: 0;
 }
 
+.Nav.Link:hover {
+  color:#ff6600;
+}
+
 .App {
   background-image: url("./resources/image/cozykitchen.jpg");
   background-position: left;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 100vh;
+  min-height: 79.4vh;
 }
-
-/* .categories,
-.category {
-  padding-top: 100px;
-} */
 
 .categories .row .col img,
 .category .row .col img {
+  
+
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 50px;
+  border-radius: 50%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid white;
+  border: 4px solid white;
+}
+
+.categories, .category {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .category-card {
@@ -100,6 +110,7 @@
   /*Bootstrap Column containing image*/
   display: flex;
   justify-content: center;
+  
 }
 
 .green_bg {
@@ -154,14 +165,18 @@
 }
 
 .recipe-image {
-  /*recipe image*/
-  border-radius: 5%;
-  padding: 1.25rem;
+  /*recipe image*/ 
   width: 400px;
   height: 400px;
   object-fit: cover;
-  border-radius: 50px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-top: 55px;
 }
+
+/* .recipe-image img {
+  
+} */
 
 .recipe-long-des-title {
   /*Description title, h2 element*/
@@ -210,3 +225,118 @@
     border-bottom-right-radius: 25px;
   }
 }
+
+
+
+.footer {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  height: auto; 
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  margin: 0 auto;
+  padding-top: 1rem;
+  min-height: 20vh;
+}
+
+#logofooter {
+  height: 128px;
+  width: 128px;
+  margin-right: 100px; 
+  animation: shake 1.3s infinite; 
+}
+
+#logofooter:hover {
+  cursor: pointer;
+
+}
+
+#socialmedia {
+  height: 128px;
+}
+
+.footer-container { 
+  background-color:#1b1b1b;
+}
+
+.footer-heading {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5rem;
+}
+
+.footer-heading h2 {
+  color: white; 
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-heading a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 0.80rem;
+}
+
+.footer-email-form h2 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+#footer-email {
+  width: 250px;
+  height: 40px;
+  font-size: 0.85rem;
+  background-color: rgba(255, 255, 255, 0.959);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+#newsletter-email {
+  height: 50px;
+  width:50px;
+  margin-left:5px;
+  margin-bottom: 10px;
+}
+
+/* HOVER LINKS IN FOOTER */
+.footer-heading a:hover {
+  color: #ff6600;
+  transition: 0.3 ease-in-out;
+}
+
+#newsletter-email:hover {
+  cursor: pointer;
+  animation: shake 1.3s infinite;
+}
+
+#socialmedia:hover {
+  cursor: pointer;
+  }
+
+.d-inline-block {
+  animation: shake2 1.3s infinite;
+
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(25deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-25deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes shake2 {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
