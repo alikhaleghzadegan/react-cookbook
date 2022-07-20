@@ -17,7 +17,7 @@
   background-position: left;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 79.4vh;
+  min-height: calc(100vh - 192px);
 }
 
 .categories .row .col img,
@@ -259,6 +259,9 @@
 
 .footer-container { 
   background-color:#1b1b1b;
+  position: relative; /*Added by Anoj*/
+  left: 0;
+  bottom: 0;
 }
 
 .footer-heading {
