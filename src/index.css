@@ -172,6 +172,14 @@
   font-family: "Arapey", serif;
 }
 
+.recipe-ing-list-item::after {
+  content: "";
+  height: 1px;
+  background: linear-gradient(to right,  rgba(147,147,147,1) 50%,rgba(147,147,147,1) 50%,rgba(0,0,0,0) 100%);
+  display: block;
+  margin-top: 10px;
+}
+
 .recipe-image {
   /*recipe image*/ 
   width: 400px;
