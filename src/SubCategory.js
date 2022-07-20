@@ -12,7 +12,7 @@ export default function SubCategory({ recipes }) {
         <div>
             <Container className='category'>
                 <Row>
-                    <Col>
+                    <Col className='category'>
                         {recipes?.filter(item => item.category === params.category)
                             .map(item => (
                                 <Link to={`/categories/${params.category}/${item.id}`} key={item.id}>
