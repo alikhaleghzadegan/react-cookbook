@@ -38,7 +38,6 @@ const useContentful = () => {
             console.error(error);
         }
     }
-
     return { getCategories, getRecipes };
 }
 

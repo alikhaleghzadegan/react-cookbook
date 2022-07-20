@@ -1,3 +1,4 @@
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -35,13 +36,12 @@ export default function Recipe({ recipes }) {
                                             return <p className="recipe-ing-list-item">{eachIngredient}</p>
                                         })}
                                     </Col>
-                                    <Col >
+                                    <Col className="image-main-col">
                                         <Row>
                                             <Col className='image-col'>
                                                 <img className="recipe-image" src={element.image} />
                                             </Col>
                                         </Row>
-
                                     </Col>
                                 </Row>
                                 <Row className='recipe-long-des-row'>

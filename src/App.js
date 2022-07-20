@@ -8,6 +8,7 @@ import Header from "./Header";
 import NavSearch from "./NavSearch";
 import Footer from "./Footer";
 
+
 function App() {
 
   const [categories, setCategories] = useState([]);
@@ -18,6 +19,8 @@ function App() {
     getCategories().then(response => setCategories(response))
     getRecipes().then(response => setRecipes(response))
   }, []);
+
+  console.log(recipes)
 
   return (
     <div>
