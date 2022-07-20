@@ -8,9 +8,6 @@
   padding: 0;
 }
 
-.Nav.Link:hover {
-  color:#ff6600;
-}
 
 .App {
   background-image: url("./resources/image/cozykitchen.jpg");
@@ -72,6 +69,11 @@
   font-size: 1.2rem;
   color: white !important;
   padding-top: 15px;
+}
+
+.navbar-nav-text:hover {
+  color: #ff6600 !important;
+  transition: 0.3 ease-in-out;
 }
 
 .path p {
