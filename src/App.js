@@ -11,7 +11,7 @@ import Footer from "./Footer";
 
 function App() {
 
-  const [categories, setCategories] = useState();
+  const [categories, setCategories] = useState([]);
   const [recipes, setRecipes] = useState([]);
   const { getCategories, getRecipes } = useContentful();
 

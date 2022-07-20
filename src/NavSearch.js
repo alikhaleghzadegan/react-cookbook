@@ -4,17 +4,15 @@ export default function NavSearch({ recipes, categories }) {
     const location = useLocation();
 
     const getCategoryTitle = function (name) {
-        return categories ? /*categories.filter(x => x.name === name)[0].title*/ ' ABC' : 'novalue';
+        return categories ? categories.filter(x => x.name == name)[0].title : 'novalue';
     }
 
     const getRecipeTitle = function (id) {
-        return recipes ? recipes.filter(x => x.id === id)[0].title : 'novalue';
+        return recipes ? recipes.filter(x => x.id == id)[0].title : 'novalue';
     }
 
-    const foo = function () {
+    const getLinks = function () {
         const path = location.pathname.split('/').filter(x => x.length !== 0);
-
-        console.log("path ", path)
 
         switch (path.length) {
             case 0:
@@ -23,21 +21,14 @@ export default function NavSearch({ recipes, categories }) {
             case 2:
                 return (
                     <p>
-                        <Link to={"/"}>Home</Link> /
-
-
-                        <Link to={`/categories/${path[0]}`}>{getCategoryTitle(path[0])}</Link>
+                        <Link to={"/"}>Home</Link> / <Link to={`/categories/${path[1]}`}>{getCategoryTitle(path[1])}</Link>
                     </p>
                 );
 
             case 3:
                 return (
                     <p>
-                        <Link to={"/"}>Home</Link> /
-
-                        {/*                         
-                        <Link to={`/categories/${path[2]}`}>{getCategoryTitle(path[2])}</Link> / <Link to={`/categories/${path[2]}/${path[3]}`}>{getRecipeTitle(path[3])}</Link> */}
-
+                        <Link to={"/"}>Home</Link> / <Link to={`/categories/${path[1]}`}>{getCategoryTitle(path[1])}</Link> / <Link to={`/categories/${path[1]}/${path[2]}`}>{getRecipeTitle(path[2])}</Link>
                     </p>
                 );
 
@@ -48,6 +39,11 @@ export default function NavSearch({ recipes, categories }) {
     }
 
     return (
-        <div className='path'>{foo()}</div>
+        <div>
+            {
+                recipes.length > 1 && categories.length > 1 &&
+                <div className='path'>{getLinks()}</div>
+            }
+        </div>
     );
 }
