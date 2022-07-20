@@ -1,13 +1,342 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "hotpizza";
+  src: url("./resources/font/hotpizza.ttf") format("truetype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
 }
+
+.Nav.Link:hover {
+  color:#ff6600;
+}
+
+.App {
+  background-image: url("./resources/image/cozykitchen.jpg");
+  background-position: left;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 79.4vh;
+}
+
+.categories .row .col img,
+.category .row .col img {
+  
+
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid white;
+}
+
+.categories, .category {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-card {
+  width: 250px;
+  height: 250px;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.category-card:hover {
+  display: inline-block;
+  transform: scale(1.1);
+}
+
+.category-card h2 {
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 300;
+  height: 50px;
+  overflow: hidden;
+}
+
+.navbar-nav-text {
+  font-family: "hotpizza", sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
+  padding-top: 15px;
+}
+
+.path p {
+  padding-top: 100px;
+  padding-left: 100px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.path a {
+  text-decoration: none;
+  color: white;
+}
+
+/*>>>DISPLAY RECIPE COMPONENT<<<*/
+.recipe-container {
+  /*Bootstrap Container*/
+  color: white;
+  padding-bottom: 50px;
+}
+
+.recipe-title-row {
+  /*Bootstrap Row containing recipe title*/
+  background-color: rgba(217, 217, 217, 0.2);
+  border-radius: 50px 50px 0px 0px;
+}
+
+.recipe-short-des-row,
+.recipe-ing-img-row {
+  /*Bootstrap Row containing ingredients/image && Row containing short description*/
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.image-col {
+  /*Bootstrap Column containing image*/
+  display: flex;
+  justify-content: center;
+  
+}
+
+.green_bg {
+  /*green background*/
+  background: rgba(168, 196, 51, 0.2);
+  border-radius: 50px;
+  margin: 1.5rem;
+}
+
+.recipe-long-des-row {
+  /*Bootstrap Row containing long description*/
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.recipe-tags-col {
+  /*Bootstrap Column containing tags*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0px 0px 50px 50px;
+}
+
+.recipe-title {
+  /*h2 element*/
+  padding: 1.25rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Hot Pizza", sans-serif;
+}
+
+.recipe-short-des {
+  /*h3 element*/
+  padding: 1.25rem;
+  font-style: italic;
+  font-size: 1.5em;
+  font-family: "Arapey", serif;
+}
+
+.recipe-ing-title {
+  /*h2 element ingredient title*/
+  font-size: 1.5rem;
+  padding: 1.25rem;
+  font-family: "Hot Pizza", sans-serif;
+}
+
+.recipe-ing-list-item {
+  /*each ingredient item, p element*/
+  font-size: 1.25rem;
+  padding: 0 1.25rem;
+  font-family: "Arapey", serif;
+}
+
+.recipe-image {
+  /*recipe image*/ 
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-top: 55px;
+}
+
+/* .recipe-image img {
+  
+} */
+
+.recipe-long-des-title {
+  /*Description title, h2 element*/
+  font-size: 1.5rem;
+  padding: 1.25rem;
+  font-family: "Hot Pizza", sans-serif;
+}
+
+.recipe-long-des {
+  /*Description paragraph, p element*/
+  font-size: 1.25rem;
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  font-family: "Arapey", serif;
+}
+
+.recipe-tags {
+  /*The recipe tags at the end of the page*/
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background: rgba(168, 196, 51, 0.2);
+  border-radius: 50px;
+  font-family: "Arapey", serif;
+  font-size: 1.25rem;
+}
+
+.margin-fixer {
+  height: 8rem;
+  width: 1rem;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 600px) {
+  .recipe-image {
+    /*recipe image*/
+    border-radius: 5%;
+    padding: 1.25rem;
+    width: 400px;
+    border-radius: 50px;
+  }
+
+  .recipe-tags-col {
+    display: flex;
+  }
+
+  .navbar {
+    border-bottom-right-radius: 25px;
+  }
+}
+
+
+
+.footer {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  height: auto; 
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  margin: 0 auto;
+  padding-top: 1rem;
+  min-height: 20vh;
+}
+
+#logofooter {
+  height: 128px;
+  width: 128px;
+  margin-right: 100px; 
+  animation: shake 1.3s infinite; 
+}
+
+#logofooter:hover {
+  cursor: pointer;
+
+}
+
+#socialmedia {
+  height: 128px;
+}
+
+.footer-container { 
+  background-color:#1b1b1b;
+}
+
+.footer-heading {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5rem;
+}
+
+.footer-heading h2 {
+  color: white; 
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-heading a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 0.80rem;
+}
+
+.footer-email-form h2 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+#footer-email {
+  width: 250px;
+  height: 40px;
+  font-size: 0.85rem;
+  background-color: rgba(255, 255, 255, 0.959);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+#newsletter-email {
+  height: 50px;
+  width:50px;
+  margin-left:5px;
+  margin-bottom: 10px;
+}
+
+/* HOVER LINKS IN FOOTER */
+.footer-heading a:hover {
+  color: #ff6600;
+  transition: 0.3 ease-in-out;
+}
+
+#newsletter-email:hover {
+  cursor: pointer;
+  animation: shake 1.3s infinite;
+}
+
+#socialmedia:hover {
+  cursor: pointer;
+  }
+
+.d-inline-block {
+  animation: shake2 1.3s infinite;
+
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(25deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-25deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes shake2 {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+

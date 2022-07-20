@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import { Routes, Route } from 'react-router-dom';
+import useContentful from "./useContentful";
+import Categories from './Categories'
+import SubCategory from './SubCategory'
+import Recipe from "./Recipe";
+import Header from "./Header";
+import NavSearch from "./NavSearch";
+import Footer from "./Footer";
 
 function App() {
+
+  const [categories, setCategories] = useState([]);
+  const [recipes, setRecipes] = useState([]);
+  const { getCategories, getRecipes } = useContentful();
+
+  useEffect(() => {
+    getCategories().then(response => setCategories(response))
+    getRecipes().then(response => setRecipes(response))
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+    <div className="App">      
+      <NavSearch categories={categories} recipes={recipes} />
+      <Routes>
+        <Route path="/" element={<Categories categories={categories} />} />
+        <Route path="/categories/:category" element={<SubCategory recipes={recipes} />} />
+        <Route path="/categories/:category/:recipe_id" element={<Recipe recipes={recipes} />} />
+      </Routes>      
+    </div>
+      <Footer/>
     </div>
   );
 }
