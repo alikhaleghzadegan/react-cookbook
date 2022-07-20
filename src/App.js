@@ -9,8 +9,8 @@ import NavSearch from "./NavSearch";
 
 function App() {
 
-  const [categories, setCategories] = useState();
-  const [recipes, setRecipes] = useState();
+  const [categories, setCategories] = useState([]);
+  const [recipes, setRecipes] = useState([]);
   const { getCategories, getRecipes } = useContentful();
 
   useEffect(() => {

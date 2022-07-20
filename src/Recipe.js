@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 
 export default function Recipe({ recipes }) {
@@ -12,7 +12,7 @@ export default function Recipe({ recipes }) {
     return (
         <div>
             {
-                recipes.map((element) => {
+                recipes.length > 1 && recipes.map((element) => {
 
                     if (element.id == recipe_id) {
 
